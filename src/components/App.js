@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 export default function App() {
   const classes = useStyles();
   const [director, setDirector] = useState('Steven Spielberg');
-  const directors = ['Director 1', 'Director 2', 'Director 3', 'Director 4']
+  const directors = ['Steven Spielberg', 'Francis Ford Coppola', 'Quentin Tarantino', 'Peter Jackson']
 
   return (
     <div className={classes.root}>
@@ -62,9 +62,9 @@ export default function App() {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            {directors.map((text, i) => (
-              <ListItem button key={i}>
-                <ListItemText primary={text} />
+            {directors.map((director, i) => (
+              <ListItem button key={i} onClick={()=>setDirector(director)}>
+                <ListItemText primary={director} />
               </ListItem>
             ))}
           </List>
@@ -72,8 +72,7 @@ export default function App() {
       </Drawer>
       <main className={classes.content}>
         <Toolbar />
-        <Movies/>
-        {data['Steven Spielberg'][0].name}
+        <Movies director={director}/>
       </main>
     </div>
   );
