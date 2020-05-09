@@ -1,0 +1,50 @@
+{
+  "name": "Directoree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
+    "start": "webpack-dev-server --mode development --env.ENVIRONMENT=development --open --history-api-fallback",
+    "build": "webpack --mode production --env.ENVIRONMENT=production",
+    "scss": "node-sass --watch scss -o src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-airbnb": "^2.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "dotenv": "^6.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "react": "^16.13.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.13.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.4",
+    "@material-ui/lab": "^3.0.0-alpha.30",
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.2",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.4.4",
+    "react-router-dom": "^4.3.1"
+  }
+}

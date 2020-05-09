@@ -1,0 +1,32 @@
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0 auto; /* extends AppBar fully */
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #2779F6;
+}
+
+img {
+  max-height: 50%
+}
+
+i {
+  vertical-align: bottom;
+}
+
+#brand {
+  color: white;
+}
