@@ -28,9 +28,9 @@ class Movies extends React.Component {
     )
 
     return (
-      <React.Fragment>
+      <>
         {movies}
-      </React.Fragment>
+      </>
     )
   }
 }

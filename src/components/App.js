@@ -74,7 +74,6 @@ export default function App() {
         <Toolbar />
         <Movies/>
         {data['Steven Spielberg'][0].name}
-        ]}
       </main>
     </div>
   );
