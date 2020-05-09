@@ -9,13 +9,14 @@ const style = {
   }
 }
 
-class Movie extends React.Component {
+class Movies extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     var movieList = ['Shawshank Redemption', 'Green Mile', 'Saving Private Ryan']
+    //take the above out...use props and a separate data file to pull movies on click
     var movies = movieList.map((movie, i)=>
       <Card style={style.movie} variant="outlined">
         <CardContent>
@@ -34,4 +35,4 @@ class Movie extends React.Component {
   }
 }
 
-export default Movie;
+export default Movies;

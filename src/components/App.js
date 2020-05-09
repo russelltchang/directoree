@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-import Movie from "./Movie"
+import { data } from "./data.js"
+import Movies from "./Movies"
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -38,6 +39,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
+  const [director, setDirector] = useState('Steven Spielberg');
+  const directors = ['Director 1', 'Director 2', 'Director 3', 'Director 4']
 
   return (
     <div className={classes.root}>
@@ -45,7 +48,7 @@ export default function App() {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            Clipped drawer
+            Directoree
           </Typography>
         </Toolbar>
       </AppBar>
@@ -59,8 +62,8 @@ export default function App() {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
+            {directors.map((text, i) => (
+              <ListItem button key={i}>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
@@ -69,7 +72,9 @@ export default function App() {
       </Drawer>
       <main className={classes.content}>
         <Toolbar />
-        <Movie/>
+        <Movies/>
+        {data['Steven Spielberg'][0].name}
+        ]}
       </main>
     </div>
   );
