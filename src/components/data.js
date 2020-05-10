@@ -39,19 +39,24 @@ var data = {
                   "name": "Raiders of the Lost Ark",
                   "year": 1981,
                   "desc": "In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers.",
-                  "rating": 8.4
+                  "rating": 8.4,
+                  "image": "Raiders of the Lost Ark.jpg"
+
               },
               {
                   "name": "E.T. the Extra-Terrestrial",
                   "year": 1982,
                   "desc": "A troubled child summons the courage to help a friendly alien escape Earth and return to his home world.",
-                  "rating": 7.8
+                  "rating": 7.8,
+                  "image": "E.T. the Extra-Terrestrial.jpg"
+
               },
               {
                   "name": "Poltergeist",
                   "year": 1982,
                   "desc": "A family's home is haunted by a host of demonic ghosts.",
-                  "rating": 7.3
+                  "rating": 7.3,
+                  "image": "Poltergeist.jpg"
               } 
       ],
 }

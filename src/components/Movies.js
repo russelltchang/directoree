@@ -12,6 +12,9 @@ const style = {
     minWidth: '285px',
     maxWidth: '285px',
     margin: 18
+  },
+  cardContent: {
+    width: '100%'
   }
 }
 
@@ -28,8 +31,8 @@ class Movies extends React.Component {
           <CardMedia
             component="img"
             alt="Movie Poster"
-            image={"/images/" + movie.name + ".jpg"}
             title="Movie Poster"
+            image={"/images/" + movie.image}
           />
           <CardContent>
             <Typography>
