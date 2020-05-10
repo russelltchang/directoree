@@ -21,16 +21,15 @@ class Movies extends React.Component {
   }
 
   render() {
+
       var cards = data[this.props.director].map((movie, i)=>
       <Card style={style.movie} variant="outlined">
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Contemplative Reptile"
-            height="140"
-            //should be images/{movie}, once all photos are saved
-            image="/images/Lord of the Rings - The Fellowship of the Ring.jpg"
-            title="Contemplative Reptile"
+            alt="Movie Poster"
+            image={"/images/" + movie.name + ".jpg"}
+            title="Movie Poster"
           />
           <CardContent>
             <Typography>
