@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
 export default function App() {
   const classes = useStyles();
   const [director, setDirector] = useState('Steven Spielberg');
-  const directors = ['Steven Spielberg', 'Francis Ford Coppola', 'Quentin Tarantino', 'Peter Jackson']
+  const directors = [];
+  for (var key in data) {directors.push(key)};
 
   return (
     <div className={classes.root}>
