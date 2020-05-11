@@ -6,32 +6,33 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
       
-const style = {
+const useStyles = makeStyles((theme) => ({
   movie: {
     minWidth: '285px',
     maxWidth: '285px',
-    margin: 18
+    height: '520px',
+    margin: 18,
   },
-  cardContent: {
-    width: '100%'
+  cardMedia: {
+    marginTop: '10'
   }
-}
+}));
 
-class Movies extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Movies = (props) => {
+  const classes = useStyles();
 
-  render() {
 
-      var cards = data[this.props.director].map((movie, i)=>
-      <Card style={style.movie} variant="outlined">
+    var cards = data[props.director].map((movie, i)=>
+      <Card className={classes.movie} variant="outlined">
         <CardActionArea>
           <CardMedia
+            className={classes.cardMedia}
             component="img"
             alt="Movie Poster"
             title="Movie Poster"
+            height="400"
             image={"/images/" + movie.image}
           />
           <CardContent>
@@ -40,7 +41,6 @@ class Movies extends React.Component {
             </Typography>
           </CardContent>
         </CardActionArea>
-
       </Card>
     )
 
@@ -50,6 +50,5 @@ class Movies extends React.Component {
       </>
     )
   }
-}
 
-export default Movies;
+  export default Movies;
