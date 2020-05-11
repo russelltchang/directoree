@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
     "start": "webpack-dev-server --mode development --env.ENVIRONMENT=development --open --history-api-fallback",
-    "build": "webpack --mode production --env.ENVIRONMENT=production"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
