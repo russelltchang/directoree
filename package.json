@@ -2,6 +2,9 @@
   "name": "Directoree",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node" : "14.2"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",

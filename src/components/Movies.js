@@ -10,15 +10,15 @@ import { makeStyles } from '@material-ui/core/styles';
       
 const useStyles = makeStyles((theme) => ({
   movie: {
-    width: '285px',
+    width: 285,
     margin: 18,
-    padding: 0
+    padding: 0,
   },
   cardMedia: {
     objectFit: 'fill'
   },
   cardContent: {
-    height: '80px'
+    height: 80
   }
 }));
 
@@ -26,7 +26,7 @@ const Movies = (props) => {
   const classes = useStyles();
 
   var cards = data[props.director].map((movie, i)=>
-    <Card className={classes.movie} variant="outlined">
+    <Card	className={classes.movie} variant="outlined">
       <CardActionArea>
         <CardMedia
           className={classes.cardMedia}

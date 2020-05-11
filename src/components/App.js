@@ -4,6 +4,7 @@ import { data } from "./data.js"
 import Movies from "./Movies"
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -64,9 +65,12 @@ export default function App() {
         <div className={classes.drawerContainer}>
           <List>
             {directors.map((director, i) => (
+              <>
               <ListItem button key={i} onClick={()=>setDirector(director)}>
                 <ListItemText primary={director} />
               </ListItem>
+              <Divider />
+              </>
             ))}
           </List>
         </div>
