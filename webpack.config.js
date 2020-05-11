@@ -45,7 +45,7 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new webpack.DefinePlugin(envKeys)
+    // new webpack.DefinePlugin(envKeys)
   ],
   externals: {
     'cheerio': 'window',
