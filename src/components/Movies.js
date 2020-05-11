@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     height: '520px',
     margin: 18,
   },
-  cardMedia: {
-    marginTop: '10'
+  cardContent: {
+    height: '60px'
   }
 }));
 
@@ -35,7 +35,7 @@ const Movies = (props) => {
             height="400"
             image={"/images/" + movie.image}
           />
-          <CardContent>
+          <CardContent className={classes.cardContent}>
             <Typography>
               {movie.name} ({movie.year})
             </Typography>
