@@ -1,15 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const dotenv = require('dotenv');
 const webpack = require('webpack');
-
-// const env = dotenv.config().parsed;
-  
-// // reduce it to a nice object, the same as before
-// const envKeys = Object.keys(env).reduce((prev, next) => {
-//   prev[`process.env.${next}`] = JSON.stringify(env[next]);
-//   return prev;
-// }, {});
 
 module.exports = {
   module: {
@@ -18,7 +9,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          query: {
+            presets: ["@babel/preset-env", "@babel/preset-react"]
+          }
         }
       },
       {
