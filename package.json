@@ -8,8 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
-    "start": "webpack-dev-server --mode development --env.ENVIRONMENT=development --open --history-api-fallback",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --open --history-api-fallback",
+    "build": "webpack --mode production",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "keywords": [],
   "author": "",
