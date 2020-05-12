@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/dist')); //makes dist the root for anything that index.html requires
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "./dist/index.html"));
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
