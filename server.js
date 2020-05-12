@@ -6,7 +6,8 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 var session = require('express-session');
-var port = 3000;
+var port = 3000 || process.env.PORT; 
+;
 
 app.use(cors({credentials: true, origin: 'http://localhost:8080'})); // cross port cookie when test
 app.use(bodyParser.json());
