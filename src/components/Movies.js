@@ -7,7 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-      
+
 const useStyles = makeStyles((theme) => ({
   movie: {
     width: 285,

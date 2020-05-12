@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
-    "start": "node server.js",
+    "start": "webpack-dev-server --mode development --open --history-api-fallback",
     "build": "webpack --mode production"
   },
   "keywords": [],
