@@ -1,10 +1,8 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var axios = require('axios')
 var cors = require('cors');
 var bodyParser = require('body-parser');
-var bcrypt = require('bcrypt');
 var session = require('express-session');
 var port = process.env.PORT || 3000; 
 ;
@@ -18,6 +16,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
 
-app.listen(port, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log('Listening at ' + port);
 });
