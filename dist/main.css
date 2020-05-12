@@ -18,6 +18,6 @@ a {
   color: #2779F6;
 }
 
-i {
-  vertical-align: bottom;
+.MuiButtonBase-root:hover {
+  cursor: default;
 }
