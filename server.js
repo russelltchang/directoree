@@ -3,9 +3,7 @@ var app = express();
 var path = require('path');
 var cors = require('cors');
 var bodyParser = require('body-parser');
-var session = require('express-session');
 var port = process.env.PORT || 3000; 
-;
 
 app.use(cors({credentials: true, origin: 'http://localhost:8080'})); // cross port cookie when test
 app.use(bodyParser.json());
