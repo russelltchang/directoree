@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
+import Collapse from '@material-ui/core/Collapse';
+
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -13,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     width: 285,
     margin: 18,
     padding: 0,
+    pointerEvents: 'none'
   },
   cardMedia: {
     objectFit: 'fill'
@@ -25,8 +28,12 @@ const useStyles = makeStyles((theme) => ({
 const Movies = (props) => {
   const classes = useStyles();
 
+  const handleClick = (movie) => {
+    console.log(movie)
+  }
+
   var cards = data[props.director].map((movie, i)=>
-    <Card	className={classes.movie} variant="outlined">
+    <Card	className={classes.movie} variant="outlined" onClick={()=>handleClick(movie.name)}>
       <CardActionArea>
         <CardMedia
           className={classes.cardMedia}
