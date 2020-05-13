@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
+    "heroku-prebuild": "npm install --dev",
     "start": "node server.js",
     "build": "webpack --mode production"
   },
