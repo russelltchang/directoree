@@ -1,14 +1,13 @@
 {
   "name": "Directoree",
   "version": "1.0.0",
-  "description": "",
   "engines": {
     "node": "14.2"
   },
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register -w ./test/jsdom.js test/*.spec.js || true",
-    "start": "node server.js",
+    "start": "webpack-dev-server --open",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -23,7 +22,6 @@
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "react": "^16.13.1",
-    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
@@ -33,17 +31,11 @@
   "dependencies": {
     "@material-ui/core": "^4.9.13",
     "@material-ui/icons": "^4.9.1",
-    "axios": "^0.19.2",
     "clsx": "^1.1.0",
-    "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
     "css-loader": "^3.5.3",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
     "html-loader": "^1.1.0",
-    "mongodb": "^3.5.7",
-    "mongoose": "^5.9.13",
-    "react-router-dom": "^5.1.2"
+    "mongoose": "^5.9.13"
   }
 }
